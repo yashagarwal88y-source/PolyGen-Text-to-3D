@@ -26,8 +26,8 @@ class MeshProcessor:
         initial_faces = int(len(mesh.faces))
         initial_vertices = int(len(mesh.vertices))
 
-        # 1. Repair normals & remove degenerate/unreferenced geometry
-        mesh.remove_degenerate_faces()
+        # 1. Repair normals & remove degenerate/unreferenced geometry (trimesh 4.x API)
+        mesh.update_faces(mesh.nondegenerate_faces())
         mesh.remove_unreferenced_vertices()
         mesh.fix_normals()
 
