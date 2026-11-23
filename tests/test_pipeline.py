@@ -1,5 +1,11 @@
-import pytest
+import sys
 from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[1]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
+import pytest
 from fastapi.testclient import TestClient
 
 from app.prompt_enhancer import PromptEnhancer
@@ -35,7 +41,6 @@ def test_generator_and_mesh_processor_normalization(tmp_path: Path):
     assert metrics["final_faces"] > 0
     assert max(metrics["bounding_box"]) == pytest.approx(1.0, rel=1e-2)
 
-    # Clean up temporary test artifact
     glb_path.unlink(missing_ok=True)
 
 
@@ -69,5 +74,4 @@ def test_fastapi_health_and_generate_endpoint():
     assert "asset_id" in body
     assert body["mesh_metrics"]["is_watertight"] is True
 
-    # Clean up generated test .glb
     Path("outputs", f"{body['asset_id']}.glb").unlink(missing_ok=True)
