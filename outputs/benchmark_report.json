@@ -1,0 +1,56 @@
+{
+  "evaluated_at": "2026-11-23T07:45:18.467788+00:00",
+  "num_samples": 4,
+  "summary": {
+    "mean_latency_sec": 0.0328,
+    "mean_face_count": 607.0,
+    "watertight_pass_rate": 1.0,
+    "mean_alignment_score": 1.0
+  },
+  "samples": [
+    {
+      "raw_prompt": "A medieval iron shield with a raised central boss",
+      "asset_id": "polygen_93d38468",
+      "prompt_provider": "rule_based_3d_template",
+      "generation_backend": "procedural_fallback",
+      "total_latency_sec": 0.0431,
+      "final_vertices": 228,
+      "final_faces": 448,
+      "is_watertight": true,
+      "alignment_score": 1.0
+    },
+    {
+      "raw_prompt": "A futuristic reconnaissance drone with brushed titanium armor",
+      "asset_id": "polygen_ec306e7b",
+      "prompt_provider": "rule_based_3d_template",
+      "generation_backend": "procedural_fallback",
+      "total_latency_sec": 0.0334,
+      "final_vertices": 290,
+      "final_faces": 576,
+      "is_watertight": true,
+      "alignment_score": 1.0
+    },
+    {
+      "raw_prompt": "An ancient stone watchtower with a square base",
+      "asset_id": "polygen_645b8873",
+      "prompt_provider": "rule_based_3d_template",
+      "generation_backend": "procedural_fallback",
+      "total_latency_sec": 0.0348,
+      "final_vertices": 58,
+      "final_faces": 108,
+      "is_watertight": true,
+      "alignment_score": 1.0
+    },
+    {
+      "raw_prompt": "A sleek sci-fi energy core ring",
+      "asset_id": "polygen_671b210b",
+      "prompt_provider": "rule_based_3d_template",
+      "generation_backend": "procedural_fallback",
+      "total_latency_sec": 0.0201,
+      "final_vertices": 648,
+      "final_faces": 1296,
+      "is_watertight": true,
+      "alignment_score": 1.0
+    }
+  ]
+}
